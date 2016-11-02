@@ -15,7 +15,38 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        // Override point for customization after application launch.、
+        
+        self.window = UIWindow(frame:kScreenBounds)
+        self.window!.backgroundColor = UIColor.white
+        
+        let homeVC:UIViewController = HomeVC()
+        let HomeNav = UINavigationController(rootViewController:homeVC)
+        let homeImg = #imageLiteral(resourceName: "btn_home_normal")
+        let homeSelectImg = #imageLiteral(resourceName: "btn_home_selected")
+        HomeNav.tabBarItem = UITabBarItem(title: "推荐",image:homeImg, selectedImage:homeSelectImg.withRenderingMode(.alwaysOriginal))
+        
+        let attentionVC:UIViewController = AttentionVC()
+        let attentionNav = UINavigationController(rootViewController:attentionVC)
+        let attentionImg = #imageLiteral(resourceName: "btn_live_normal")
+        let attentionSelectImg = #imageLiteral(resourceName: "btn_live_selected")
+        attentionNav.tabBarItem = UITabBarItem(title:"关注",image:attentionImg,selectedImage:attentionSelectImg.withRenderingMode(.alwaysOriginal))
+        
+        let mineVC:UIViewController = MineVC()
+        let mineNav = UINavigationController(rootViewController:mineVC)
+        let mineImg = #imageLiteral(resourceName: "btn_user_normal")
+        let mineSelectImg = #imageLiteral(resourceName: "btn_user_selected")
+        mineNav.tabBarItem = UITabBarItem(title:"我的",image:mineImg,selectedImage:mineSelectImg.withRenderingMode(.alwaysOriginal))
+        
+        let tabBarArr = [HomeNav,attentionNav,mineNav]
+        let tabbarController = UITabBarController()
+        tabbarController.viewControllers = tabBarArr
+        self.window?.rootViewController = tabbarController
+        self.window!.makeKeyAndVisible()
+        
+        UITabBarItem.appearance().setTitleTextAttributes([NSForegroundColorAttributeName: UIColor.gray], for:.normal)
+        UITabBarItem.appearance().setTitleTextAttributes([NSForegroundColorAttributeName: UIColor.orange], for:.selected)
+        
         return true
     }
 
