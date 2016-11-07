@@ -3,27 +3,27 @@ PODS:
   - CocoaAsyncSocket (7.5.0):
     - CocoaAsyncSocket/GCD (= 7.5.0)
   - CocoaAsyncSocket/GCD (7.5.0)
-  - MBProgressHUD (1.0.0)
   - MJRefresh (3.1.12)
   - SnapKit (3.0.2)
+  - SVProgressHUD (2.0.3)
   - SwiftyJSON (3.1.1)
 
 DEPENDENCIES:
   - Alamofire (~> 4.0.1)
   - CocoaAsyncSocket (~> 7.5.0)
-  - MBProgressHUD (~> 1.0.0)
   - MJRefresh (~> 3.1.12)
   - SnapKit (~> 3.0.2)
+  - SVProgressHUD (~> 2.0.3)
   - SwiftyJSON (~> 3.1.1)
 
 SPEC CHECKSUMS:
   Alamofire: 7682d43245de14874acd142ec137b144aa1dd335
   CocoaAsyncSocket: 3baeb1ddd969f81cf9fca81053ae49ef2d1cbbfa
-  MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
   MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
   SnapKit: 2e456761aa92d4d4067a7a5594c18769d451a8ad
+  SVProgressHUD: b0830714205bea1317ea1a2ebc71e5633af334d4
   SwiftyJSON: f0be2e604f83e8405a624e9f891898bf6ed4e019
 
-PODFILE CHECKSUM: 1b30d30c8cddb4eb32b1eda7f86edc106dbacf32
+PODFILE CHECKSUM: f6e105e5d7c898cbe2b86f030987c702ceb813ec
 
 COCOAPODS: 1.1.1

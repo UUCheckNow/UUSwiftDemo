@@ -13,7 +13,8 @@ class UUDataRequest: NSObject {
     
     class func requestData(urlStr aUrlStr: String!, parmas aParmas: Parameters!, completeHandler: ((_ responseObj:DataResponse<Any>) -> Void)?)
     {
-        Alamofire.request(aUrlStr, parameters:aParmas).responseJSON { (dataResponse: DataResponse) in completeHandler!(dataResponse)
+        Alamofire.request(aUrlStr, parameters:aParmas).responseJSON {
+            (dataResponse: DataResponse) in completeHandler!(dataResponse)
         }
     }
 

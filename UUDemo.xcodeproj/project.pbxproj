@@ -12,6 +12,8 @@
 		DF11C1521DC75660000DAB42 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF11C1501DC75660000DAB42 /* LaunchScreen.storyboard */; };
 		DF11C15D1DC75660000DAB42 /* UUDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF11C15C1DC75660000DAB42 /* UUDemoTests.swift */; };
 		DF11C1681DC75660000DAB42 /* UUDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF11C1671DC75660000DAB42 /* UUDemoUITests.swift */; };
+		DF2E702F1DCC5F9300BFC2DF /* UIView+Loading.m in Sources */ = {isa = PBXBuildFile; fileRef = DF2E702E1DCC5F9300BFC2DF /* UIView+Loading.m */; };
+		DF2E70341DCC64BB00BFC2DF /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2E70331DCC64BB00BFC2DF /* LoadingView.swift */; };
 		DFBC52BF1DC9832F009B3781 /* UUDataRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBC52B61DC9832F009B3781 /* UUDataRequest.swift */; };
 		DFBC52C01DC9832F009B3781 /* UUHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBC52B71DC9832F009B3781 /* UUHeader.swift */; };
 		DFBC52C11DC9832F009B3781 /* UUUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBC52B81DC9832F009B3781 /* UUUtils.swift */; };
@@ -56,6 +58,10 @@
 		DF11C1631DC75660000DAB42 /* UUDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UUDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF11C1671DC75660000DAB42 /* UUDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UUDemoUITests.swift; sourceTree = "<group>"; };
 		DF11C1691DC75660000DAB42 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DF2E702D1DCC5F9300BFC2DF /* UIView+Loading.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Loading.h"; sourceTree = "<group>"; };
+		DF2E702E1DCC5F9300BFC2DF /* UIView+Loading.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Loading.m"; sourceTree = "<group>"; };
+		DF2E70321DCC643B00BFC2DF /* UUDemo-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UUDemo-Bridging-Header.h"; sourceTree = "<group>"; };
+		DF2E70331DCC64BB00BFC2DF /* LoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		DFBC52B61DC9832F009B3781 /* UUDataRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UUDataRequest.swift; sourceTree = "<group>"; };
 		DFBC52B71DC9832F009B3781 /* UUHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UUHeader.swift; sourceTree = "<group>"; };
 		DFBC52B81DC9832F009B3781 /* UUUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UUUtils.swift; sourceTree = "<group>"; };
@@ -168,9 +174,13 @@
 		DFBC52B51DC9832F009B3781 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				DF2E70321DCC643B00BFC2DF /* UUDemo-Bridging-Header.h */,
 				DFBC52B81DC9832F009B3781 /* UUUtils.swift */,
 				DFBC52B71DC9832F009B3781 /* UUHeader.swift */,
 				DFBC52B61DC9832F009B3781 /* UUDataRequest.swift */,
+				DF2E702D1DCC5F9300BFC2DF /* UIView+Loading.h */,
+				DF2E702E1DCC5F9300BFC2DF /* UIView+Loading.m */,
+				DF2E70331DCC64BB00BFC2DF /* LoadingView.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -346,6 +356,7 @@
 					DF11C1431DC75660000DAB42 = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = WMAV28N872;
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 					};
 					DF11C1571DC75660000DAB42 = {
@@ -465,6 +476,8 @@
 				DFBC52C01DC9832F009B3781 /* UUHeader.swift in Sources */,
 				DFBC52BF1DC9832F009B3781 /* UUDataRequest.swift in Sources */,
 				DFBC52CD1DC983AC009B3781 /* UUModel.swift in Sources */,
+				DF2E70341DCC64BB00BFC2DF /* LoadingView.swift in Sources */,
+				DF2E702F1DCC5F9300BFC2DF /* UIView+Loading.m in Sources */,
 				DFBC52DA1DC9852B009B3781 /* MineVC.swift in Sources */,
 				DF11C1481DC75660000DAB42 /* AppDelegate.swift in Sources */,
 				DFBC52DC1DC990B6009B3781 /* AttentionVC.swift in Sources */,
@@ -616,11 +629,14 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = WMAV28N872;
 				INFOPLIST_FILE = UUDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = uu.UUDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "UUDemo/Tools/UUDemo-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -631,11 +647,13 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = WMAV28N872;
 				INFOPLIST_FILE = UUDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = uu.UUDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "UUDemo/Tools/UUDemo-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

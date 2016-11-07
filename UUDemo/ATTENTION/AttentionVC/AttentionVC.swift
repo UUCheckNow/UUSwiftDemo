@@ -14,6 +14,17 @@ class AttentionVC: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+//        func makeIncrementer() -> ((Int) -> Int) {
+//            func addOne(number: Int) -> Int {
+//                return 1 + number
+//            }
+//            return addOne
+//        }
+//        var increment = makeIncrementer()
+//        increment(7)
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
